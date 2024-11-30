@@ -1,0 +1,70 @@
+.firstPage {
+  position: absolute;
+  top: 0;
+  right: 18%;
+}
+
+.loginForm {
+  width: 522px;
+  height: 630px;
+  box-shadow: 0 0 30px #dfdfdf;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-left: 50px;
+}
+
+.titleForm {
+  font-size: 32px;
+  color: #565656;
+  text-align: center;
+  padding: 54px 0 64px 0;
+}
+
+.loginText,
+.title2 {
+  color: var(--colorViolet);
+  font-weight: bold;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.createAc {
+  margin-top: 13px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.createAc > a,
+.fogetPas > a {
+  color: var(--colorViolet);
+  transition: 0.3s;
+}
+
+.createAc > a:hover,
+.fogetPas > a:hover {
+  color: var(--colorLilac);
+}
+
+.fogetPas {
+  margin: -19px 42px 60px 0;
+  text-align: right;
+  font-size: 20px;
+}
+
+.title1,
+.title2 {
+  font-size: 40px;
+  color: var(--colorViolet);
+}
+
+.title2 {
+  margin-top: -15px;
+  margin-bottom: 39px;
+}
+
+.title1 {
+  padding-top: 102px;
+}

@@ -1,0 +1,25 @@
+.label {
+  color: #606060;
+  font-size: 20px;
+  display: block;
+  text-align: left;
+  padding: 0 0 0 65px;
+}
+
+.input {
+  width: 436px;
+  height: 45px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin: 12px 0 37px 0;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.input:focus {
+  box-shadow: 0 0 5px var(--colorViolet);
+}
+
+.inputData {
+  text-align: center;
+}

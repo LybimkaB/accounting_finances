@@ -1,0 +1,15 @@
+.btnFirstPage {
+  color: #ffffff;
+  background-color: var(--colorViolet);
+  width: 266px;
+  height: 64px;
+  border-radius: 10px;
+  font-size: 32px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+}
+
+.btnFirstPage:hover {
+  filter: brightness(90%);
+}
