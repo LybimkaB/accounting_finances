@@ -1,0 +1,171 @@
+.addForm {
+  display: grid;
+  grid-template-columns: auto 370px;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "header header"
+    "content menu";
+}
+
+.addFormNoActive {
+  grid-template-areas:
+    "header header"
+    "content content";
+}
+
+.header {
+  grid-area: header;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    90deg,
+    rgba(157, 210, 247, 1) 0%,
+    rgba(177, 161, 238, 1) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.header_right_cont {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  padding: 0 40px 0 0;
+  height: 40px;
+  border-right: 2px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.content {
+  grid-area: content;
+}
+
+.menu {
+  grid-area: menu;
+  width: 370px;
+  min-height: calc(100vh - 60px);
+  height: auto;
+  background: linear-gradient(
+    360deg,
+    rgba(157, 210, 247, 1) 0%,
+    rgba(177, 161, 238, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: view 0.7s ease-in-out;
+}
+
+.activeNot {
+  animation: hidden 0.7s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 370px;
+}
+
+.menuOpen {
+  background: url("../../img/menu.svg") no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.menu_cont {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 30px;
+  border-bottom: 1px solid #fff;
+  height: 60px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu_cont:hover {
+  background-color: #e9ebff54;
+}
+
+.menuList {
+  margin: 75px 0;
+}
+
+.footerList {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerList a {
+  color: #5e5e5e;
+}
+
+.footerList a:hover {
+  color: #65128b;
+}
+
+.footerText {
+  margin: 25px 0 20px 0;
+  text-align: center;
+  color: #949494;
+}
+
+/* 769px — 1024px — маленькие экраны, ноутбуки */
+@media (max-width: 768px) {
+  .addForm {
+    grid-template-areas:
+      "header header"
+      "content content";
+  }
+
+  .menu {
+    animation: view 0.7s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 370px;
+  }
+
+  .activeNot {
+    animation: hidden 0.7s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 370px;
+  }
+}
+
+@keyframes hidden {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(400px);
+    display: none;
+  }
+}
+
+@keyframes view {
+  0% {
+    display: none;
+    transform: translateX(400px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
